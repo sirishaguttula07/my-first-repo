@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #greeting {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Greeting App!</h1>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button onclick="greetUser()">Greet Me</button>
+
+    <div id="greeting"></div>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            const greeting = name ? `Hello, ${name}! 👋` : "Please enter your name.";
+            document.getElementById('greeting').textContent = greeting;
+        }
+    </script>
+</body>
+</html>
